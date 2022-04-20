@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Selector Demo</title>
+	<style>
+		/* Type selector */
+		p {
+			color: red;
+		}
+
+		/*Id Selector*/
+		#header {
+			color: pink;
+		}
+		/*
+		Class selector
+		 */
+		.blue {
+			color: blue;
+		}
+		.green {
+			color: green;
+		}
+
+		.bg-black {
+			background-color: black;
+		}
+
+		.bg-yellow {
+			background-color: yellow;
+		}
+
+		/*Attribute selector*/
+		[title] {
+			color: grey;
+		}
+		a[title] {
+			color: grey;
+		}
+		a[title ="facebook"] {
+			
+		}
+	</style>
+</head>
+<body>
+	<p>
+		Hello World!
+	</p>
+
+	<p>Bye <span>Bye</span>!</p>
+
+	<div id="header">
+		This is header
+	</div>
+
+	<div class="blue bg-black">
+		This is first div.
+	</div>
+
+	<div class="green bg-yellow">
+		This is second div.
+	</div>
+
+	<h2 class="blue bg-yellow">This is first h2</h2>
+
+	<h2 class="green bg-black">This is second h2</h2>
+
+	<a href="#" title="google">google</a>
+	<a href="#" title="facebook">facebook</a>
+	<a href="#">twitter</a>
+
+	<span title="title">Title</span>
+
+</body>
+</html>
