@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Combinator selector</title>
+	<style type="text/css">
+		p {
+			color: red;
+		}
+
+		/*Descendent combinator*/
+		div p {
+			color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+<div>
+	<p>First</p>
+	<p>Third</p>
+	<nav>
+		<p>Fourth</p>
+	</nav>
+</div>
+<p>Second</p>
+</body>
+</html>
