@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vertical margin collapse</title>
+	<style type="text/css">
+		p {
+			border:  2px solid red;
+		}
+		.first {
+			background-color:  green;
+			margin-bottom: 40px;
+		}
+
+		.second {
+			background-color: yellow;
+			margin-top: -60px;
+		}
+	</style>
+</head>
+<body>
+<p class="first">
+	This is paragraph 1
+</p>
+<p class="second">This is paragraph 2</p>
+</body>
+</html>

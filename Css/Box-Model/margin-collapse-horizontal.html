@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horizontal margin</title>
+    <style>
+        /**
+        Only Vertical margins collapse
+         */
+        p {
+            border: 1px solid currentColor;
+            width: 250px;
+            display: inline-block;
+        }
+        .left {
+            background-color: hsl(89deg, 100%, 50%);
+            margin-right: 24px;
+        }
+        .right {
+            background-color: hsl(45deg, 100%, 50%);
+            margin-left: 24px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <p class="left">This is first paragraph provided with a bit of content. We are here to test Horizontal margin</p>
+    <p class="right">This is Second paragraph provided with a bit of content. We are here to test Horizontal margin</p>
+    
+</div>
+</body>
+</html>
