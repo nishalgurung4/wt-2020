@@ -7,21 +7,72 @@
 	<style type="text/css">
 		div {
 			border: 1px solid hotpink;
-			height: 500px;
-			position: relative;
 		}
 		p {
-			background-color: green;
+			background-color: blueviolet;
+			margin: 0;
+			color: white;
+		}
+		.first-p {
 			position: absolute;
-			bottom: 20px;
+			bottom: 0;
+			left: 0;
+		}
+
+		.second-p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		.third-p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		.fourth-p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.first {
+			height: 600px;
+			position: relative;
+		}
+
+		.second {
+			height: 400px;
+			margin:  80px;
+			position: relative;
+		}
+
+		.third {
+			height: 300px;
+			margin: 50px;
+			position: relative;
 		}
 	</style>
 </head>
 <body>
-<div>
-	<p>
-		This is paragraph.
+	<div class="first">
+		<div class="second">
+			<div class="third">
+				<p class="fourth-p">
+					This is fourth
+				</p>
+			</div>
+			<p class="third-p">
+					This is third
+			</p>
+		</div>
+		<p class="second-p">
+			This is second
+		</p>
+	</div>
+	<p class="first-p">
+		This is first.
 	</p>
-</div>
+
 </body>
 </html>
