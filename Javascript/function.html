@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// return with parameter
+	function isEligibleToVoteWithParam(age)
+	{
+		return (age < 18) ? false : true;
+
+	}
+
+	// return without parameter
+	function isEligibleToVote()
+	{
+		let age = 20;
+		if (age < 18) {
+			return false;
+		}
+		return true;
+	}
+	
+	//no return with parameter
+	function difference(num1, num2)
+	{
+		console.log((num1 < num2 )? num2 - num1 : num1 - num2);
+	}
+
+	// no return without parameter
+	function sum()
+	{
+		console.log(2+5);
+
+	}
+
+	sum();
+	difference(6, 2);
+
+	if (isEligibleToVote()) {
+		console.log("Eligible to vote");
+	} else {
+		console.log("Not Eligible to vote");
+	}
+
+	if (isEligibleToVoteWithParam(13)) {
+		console.log("Eligible to vote")
+	} else {
+		console.log("Not Eligible to vote");
+	}
+</script>
+
+</body>
+</html>
