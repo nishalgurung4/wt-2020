@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event</title>
+</head>
+<body>
+<button onclick="handleClick()">Click Me!</button>
+<button onclick="handleClick()" onkey>Hover Me!</button>
+<input type="text" id="search" />
+Name : <span id="display"></span>
+
+<div id="text-content"></div>
+<div id="inner-html"></div>
+
+<script type="text/javascript">
+
+	document.querySelector("#inner-html").innerHTML = "<span style='color:red'> InnerHTML </span>";
+
+	document.querySelector("#text-content").textContent = "<span style='color:red'> InnerHTML </span>";
+	function handleClick()
+	{
+		alert("Handling");
+	}
+
+	const btnEl = document.querySelectorAll("button");
+	for(element of btnEl) {
+		//best approach
+		element.addEventListener('click', function () {
+			alert("Second click");
+		});
+	}
+
+	const searchEl = document.querySelector("#search");
+
+	searchEl.onkeyup = function () {
+		console.log("vayo");
+	}
+	//it overrides
+	searchEl.onkeyup = function () {
+		const displayEl = document.querySelector("#display");
+		displayEl.textContent = searchEl.value;
+
+	}
+</script>
+</body>
+</html>

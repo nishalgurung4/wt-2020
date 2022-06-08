@@ -7,7 +7,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	const marks = [10, 90, 80];
+	const marks = [50, 50, 80, 58];
 
 	getResult(marks);
 
@@ -17,7 +17,7 @@
 			console.log("Fail...");
 			return false;
 		}
-
+		
 		let percentage = getPercentage(getTotalMarks(marks), marks.length * 100);
 
 		console.log("You got " + getDivision(percentage));
@@ -26,7 +26,11 @@
 
 	function isPassInAllSubject(marks)
 	{
+		console.log("==== is pass in all subject=====");
+
 		let passMarks = marks.filter(mark => mark >= 40);
+
+		console.log(passMarks);
 		return (passMarks.length === marks.length) ? true : false;
 	}
 
