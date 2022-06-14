@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object</title>
+</head>
+<body>
+<script type="text/javascript">
+	//1. 
+	let person = {};
+	person.name = "Anil";
+	person.sound = () => console.log("talking");
+
+	//2.
+	let animal = new Object();
+	animal.name = "Dog";
+	animal.sound = function () {
+		console.log("barking");
+	}
+
+	//3. (Recommended)
+	let student = {
+		firstName: "Rohit",
+		lastName: "Magar",
+		roll: 1,
+		phone: ['9806612345', '9846012345'],
+		parent: {
+			fatherName: "Rahul Magar",
+			motherName: "Rina Magar"
+		},
+		study: function (subject = "Javascript") {
+			console.log("studying " + subject);
+		},
+		doAssignment () {
+			console.log("doing assignment")
+		},
+		play: () => console.log("playing"),
+		getFullName() {
+			console.log(this.firstName + " " + this.lastName);
+		}
+	};
+
+	console.log(student.firstName); //recommended
+	console.log(student['lastName']);
+	console.log(student.roll);
+	console.log(student.phone[0]);
+	console.log(student['phone'][1]);
+	console.log(student.parent.fatherName);
+	console.log(student.parent.motherName);
+	student.study("Nepali");
+	student.study();
+	student.doAssignment();
+	student.play();
+	student.getFullName();
+
+</script>
+</body>
+</html>

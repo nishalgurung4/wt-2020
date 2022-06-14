@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stacking Elements</title>
+	<style type="text/css">
+		#container {
+			position: relative;
+		}
+		.box {
+			height: 200px;
+			width: 200px;
+			position: absolute;
+		}
+		#box1 {
+			background-color: red;
+		}
+		#box2 {
+			background-color: yellow;
+			position: absolute;
+			left: 50px;
+			top: 50px;
+		}
+		#box3 {
+			background-color: green;
+			position: absolute;
+			left: 100px;
+			top: 100px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<div id="box1" class="box">
+		
+	</div>
+	<div id="box2" class="box">
+		
+	</div>
+	<div id="box3" class="box">
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+	const box1El = document.getElementById("box1");
+	const box2El = document.getElementById("box2");
+	const box3El = document.getElementById("box3");
+	box1El.addEventListener("click", function () {
+		box1El.style.zIndex = 10;
+		box2El.style.zIndex = 0;
+		box3El.style.zIndex = 0;
+	});
+
+	box2El.addEventListener("click", function () {
+		box2El.style.zIndex = 10;
+		box1El.style.zIndex = 0;
+		box3El.style.zIndex = 0;
+	});
+
+	box3El.addEventListener("click", function () {
+		box3El.style.zIndex = 10;
+		box1El.style.zIndex = 0;
+		box2El.style.zIndex = 0;
+	})
+</script>
+</body>
+</html>

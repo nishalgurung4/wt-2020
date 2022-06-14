@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event</title>
+	<button>Click!</button>
+
+	<button id="another-btn">Another Click</button>
+
+	<button id="remove-btn">Remove Event </button>
+</head>
+<body>
+<script type="text/javascript">
+	const btn = document.querySelector("button");
+	
+	btn.addEventListener("click", handleClick);
+
+	function handleClick()
+	{
+		alert("handle click");
+	}
+
+	document.querySelector("button").addEventListener("click", function () {
+		alert("another handle click");
+	});
+
+	const anotherBtn = document.getElementById("another-btn");
+	anotherBtn.onclick = function () {
+		alert("another button click");
+	};
+
+	anotherBtn.onclick = function () {
+		alert("override button click");
+	}
+
+	document.querySelector("#remove-btn").addEventListener("click", function () {
+		btn.removeEventListener("click", handleClick, false);
+	});
+</script>
+</body>
+</html>

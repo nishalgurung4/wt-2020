@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dynamic content</title>
+	<style type="text/css">
+		.box {
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			margin: 10px;
+		}
+		.container{
+			display: flex;
+		}
+
+	</style>
+</head>
+<body>
+	<button id="btn-add">Add Box</button>
+	<button id="btn-remove">Remove Box</button>
+	<div class="container"></div>
+
+	<script type="text/javascript">
+		const containerEl = document.querySelector(".container");
+		const box = "<div class='box'></div>";
+		document.querySelector("#btn-add").addEventListener("click", function () {
+				containerEl.innerHTML += box;
+		});
+
+		document.querySelector("#btn-remove").addEventListener("click", function () {
+			const boxElements = document.querySelectorAll(".container div");
+			boxElements[boxElements.length - 1].remove();
+		})
+	</script>
+</body>
+</html>
