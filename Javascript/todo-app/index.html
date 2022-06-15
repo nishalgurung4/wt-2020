@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Todo App
+	</title>
+	<style type="text/css">
+		#input-todo {
+			height: 50px;
+			width:  50%;
+			margin-top: 2rem;
+			padding-left: 25px;
+		}
+		.container {
+			position: absolute;
+			margin: auto;
+			left: 0px;
+			right: 0px;
+			height: 70vh;
+			width: 50vw;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input id="input-todo" type="text" placeholder="Enter your list" />
+		<div>
+			<h4>Your todo lists:</h4>
+			<div id="result">
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		const inputEl = document.getElementById("input-todo");
+		const resultEl = document.getElementById("result");
+
+		let tasks = [];
+
+		function Task(name)
+		{
+			this.name = name;
+			this.isComplete = false;
+		}
+
+		function addTask(name)
+		{
+			tasks.push(new Task(name));
+			renderDOM();
+
+		}
+
+		function markAsComplete(task)
+		{
+
+		}
+
+		function removeTask(task)
+		{
+			
+		}
+
+		inputEl.addEventListener("keyup", function (event) {
+			if (event.code == "Enter") {
+				addTask(inputEl.value);
+				inputEl.value = "";
+			}
+
+		});
+
+		function renderDOM()
+		{
+			resultEl.innerHTML = "";
+			tasks.forEach(function (task) {
+				resultEl.innerHTML += `<p><input type='checkbox' />${task.name} </p>`;
+			})
+		}
+	</script>
+</body>
+</html>
