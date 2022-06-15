@@ -4,3 +4,4 @@
 3. [Lab 3: Color palette](https://github.com/nishalgurung4/wt-2020/tree/main/Labs/Lab3)
 4. [Lab 4: Design Navbar, CTA, Hero section and 404 page.](https://github.com/nishalgurung4/wt-2020/tree/main/Labs/Lab4)
 5. [Lab 5: Javascript Fundamental.](https://github.com/nishalgurung4/wt-2020/tree/main/Labs/Lab5)
+6. [Lab 6: DOM manipulation, Events and Objects in JS.](https://github.com/nishalgurung4/wt-2020/tree/main/Labs/Lab6)
