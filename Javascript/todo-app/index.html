@@ -39,10 +39,31 @@
 
 		let tasks = [];
 
-		function Task(name)
+		//constructor using prototyping oop
+		// function Task(name)
+		// {
+		// 	this.name = name;
+		// 	this.isComplete = false;
+		// 	this.markAsComplete = () => this.isComplete = true;
+		// 	this.markAsInComplete = () => this.isComplete = false;
+		// }
+
+		//pure oop
+		class Task 
 		{
-			this.name = name;
-			this.isComplete = false;
+			name;
+			isComplete;
+			constructor(name) {
+				this.name = name;
+				this.isComplete = false;
+			}
+			markAsComplete() {
+				this.isComplete = true;
+			}
+
+			markAsInComplete() {
+				this.isComplete = false;
+			}
 		}
 
 		function addTask(name)
@@ -52,14 +73,21 @@
 
 		}
 
-		function markAsComplete(task)
+		function markAsAllComplete()
 		{
+			tasks.forEach((task) =>  task.isComplete = true);
 
 		}
 
+		function markASAllInComplete()
+		{
+			tasks.forEach((task) =>  task.isComplete = false);
+		}
+
+
 		function removeTask(task)
 		{
-			
+
 		}
 
 		inputEl.addEventListener("keyup", function (event) {
