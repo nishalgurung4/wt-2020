@@ -1,0 +1,59 @@
+Database Management System
+
+Types:
+
+1) SQL Based
+--- Common language - SQL language
+---- Data are represent in table 
+--- Example: MySql, SQl Server, Postgres
+2) No SQL Based
+
+--- No SQL Language, 
+--- Data are represent in Javscript like Object.
+--- Example:  Mongo DB
+
+
+SQL Command types:
+
+1) DDL (Data Definition language)
+--- CREATE TABLE, CREATE DATABASE, DROP TABLE, DROP DATABASE
+
+2) DQL (Data Query Language)
+-- SELECT
+
+3) DML (Data Manipulation language)
+-- INSERT, DELETE, UPDATE
+
+4) DCL (DAta Control Language)
+
+--- GRANT, INVOKE
+
+Command list:
+
+- SHOW DATABASES;
+- CREATE DATABASE <database_name>;
+- USE <database_name>;
+- DROP DATBASE <database_name>;
+
+- CREATE TABLE <table_name> (
+	<column_name> <data_type> [<constraints>]
+	...........
+);
+- DESCRIBE <table_name>
+- DROP TABLE <table_name>
+- ALTER .........
+- INSERT INTO <`table_name`> 
+	[(`column1`, ..... , `column2`)]
+	VALUES (values......) 
+	[, (values....)];
+- SELECT <column>[, <column>] FROM <table_name>;
+- SELECT * FROM <table_name>;
+- SELECT * FROM <table_name> WHERE <column> = <value>;
+- SELECT * FROM <table_name> WHERE <column> LIKE <%value%>
+- DELET FROM <table_name> WHERE <column> = <value>;
+
+
+
+
+
+
