@@ -16,7 +16,7 @@ $sql = "INSERT INTO students (name, email, password, dob, favorite_color, weight
 VALUES ('$name', '$email', '$password', '$dob', '$favorite_color', $weight, '$gender', '$hobbies', '$nationality')";
 
 if($conn->query($sql) == TRUE) {
-	die("success");
+	header("location:../?success=inserted successfully");
 } else {
-	die("error");
+	header("location:../?error=error occured");
 }

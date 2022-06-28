@@ -21,9 +21,43 @@ $result = $conn->query($sql);
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Students</title>
+	<style type="text/css">
+		.alert {
+			padding: 5px;
+			width: 200px;
+			height: 50px;
+			margin: 0 auto;
+			position: relative;
+		}
 
+		.alert-danger {
+			border:  2px solid red;
+
+		}
+
+		.alert-success {
+			border: 2px solid green;
+		}
+		.close {
+			position: absolute;
+			top: 2px;
+			right: 2px;
+		}
+
+	</style>
 </head>
 <body>
+	<?php if(isset($_GET['success'])) { ?>
+	<div class="alert alert-success">
+		<div class="close">X</div>
+		<?= $_GET['success'] ?>
+	</div>
+	<?php } elseif (isset($_GET['error'])) { ?>
+		<div class="alert alert-danger">
+		<div class="close">X</div>
+			<?= $_GET['error'] ?>
+	</div>
+	<?php } ?>
 <h2>List of students</h2>
 <table border="1">
 	<thead>
