@@ -1,5 +1,7 @@
 <?php 
 
+require_once "helpers.php";
+
 $serverName = "localhost";
 $userName = "root";
 $password = "";
