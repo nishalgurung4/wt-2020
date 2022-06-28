@@ -11,7 +11,7 @@
 	</style>
 </head>
 <body>
-<form method="POST" action="../save/" enctype="multipart/form-data">
+<form method="POST" action="../action/save.php" enctype="multipart/form-data">
 	<div class="form-group">
 		<label for="name">Name</label>
 		<input type="text" id="name" placeholder="Nishal Gurung" name="name">

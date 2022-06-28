@@ -94,7 +94,8 @@ $result = $conn->query($sql);
 				<td><?= $student['nationality'] ?></td>
 				<td>
 					<a href="#">Edit</a>
-					<a href="#">Delete</a>
+					<a href="#" data-id="<?= $student['id'] ?>" class='delete'>Delete</a>
+					
 				</td>
 			</tr>
 		<?php }
@@ -106,5 +107,26 @@ $result = $conn->query($sql);
 	<?php } ?>
 	</tbody>
 </table>
+
+<script type="text/javascript">
+	const deleteEl = document.querySelectorAll(".delete");
+	for(el of deleteEl) {
+		el.addEventListener("click", deleteStudent);
+	}
+	function deleteStudent(event)
+	{
+		const id = event.target.getAttribute('data-id');
+		let formEl = document.createElement("form");
+		formEl.setAttribute("method", "POST");
+		formEl.setAttribute("action", "./action/delete.php");
+		let idEl = document.createElement("input");
+		idEl.setAttribute("type", "hidden");
+		idEl.setAttribute("name", "id");
+		idEl.setAttribute("value", id);
+		formEl.appendChild(idEl);
+		document.body.appendChild(formEl);
+		formEl.submit();
+	}
+</script>
 </body>
 </html>
