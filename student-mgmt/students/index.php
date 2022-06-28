@@ -5,14 +5,6 @@ $sql = "SELECT * FROM students";
 
 $result = $conn->query($sql);
 
-// if ($result->num_rows > 0) {
-// 	while ($row = $result->fetch_assoc()) {
-// 		echo $row['id'].' '.$row['name'];
-// 		echo "<br />";
-// 	}
-// }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +85,7 @@ $result = $conn->query($sql);
 				<td><?= $student['hobbies'] ?></td>
 				<td><?= $student['nationality'] ?></td>
 				<td>
-					<a href="#">Edit</a>
+					<a href="<?= './edit/?id='.$student['id'] ?>">Edit</a>
 					<a href="#" data-id="<?= $student['id'] ?>" class='delete'>Delete</a>
 					
 				</td>
